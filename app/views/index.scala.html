@@ -1,6 +1,40 @@
 @(name: String)
 
-@main("Welcome to Play") {
-  <h1>Welcome to @name!</h1>
-  <a href="/game"><button>Start Game</button></a>
+@main("Willkommen") {
+<h1>Willkommen bei @name!</h1>
+<div>
+  <h2>Spielregeln</h2>
+  <p>Es gibt zwei Panzer auf einer Karte. Die Karte besteht aus verschiedenen Feldern, die sich unterschiedlich auf das
+    Spielverhalten auswirken.</p>
+  <p>Jeder Spieler hat <b>zwei Züge pro Runde</b>, dann ist der andere Spieler an der Reihe.</p>
+  <p>Ein Panzer kann nach <b>links, rechts, oben und unten</b> bewegen oder <b>einen Schuss abgeben</b>.</p>
+  <p>Die Trefferchance eines Schusses definiert sich durch den Abstand eines Panzers zum Anderen und durch die Felder
+    die zwischen ihnen liegen.</p>
+  <p><b>Wichtig:</b> Ein Panzer kann nur getroffen werden, wenn er sich auf der selben
+    horizontalen oder vertikalen Linie befindet.</p>
+
+  <h2>Felder</h2>
+  <table>
+    <tr>
+      <td><img src="@routes.Assets.versioned("images/gamefield.png")" alt=""></td>
+      <td>
+        <p><b>B</b> ist ein <b>Busch</b>. Befindet sich ein Panzer in diesem, ist seine <b>eigene</b> Trefferchance
+          <b>verringert</b>.
+        </p>
+        <p><b>F</b> ist ein <b>Wald</b>. Befindet sich ein Panzer in diesem, ist die Chance ihn zu treffen <b>verringert</b>.
+        </p>
+        <p><b>S</b> ist ein <b>Stein</b>. Es ist <b>nicht möglich</b> durch Steine zu schiessen.</p>
+        <p><b>W</b> ist <b>Wasser</b>. Dieses kann <b>nicht passiert</b> werden.</p>
+        <p><b>H</b> ist ein <b>Hügel</b>. Ein Panzer der sich diesem befindet kann auf jede Position der Karte
+          schiessen.</p>
+        <p><b>O</b> ist ein <b>freies Feld</b>. Auf diesem findet man keinen Schutz.</p>
+        <br>
+        <p><b>T</b> ist ein Panzer. Dieser bewegt sich dynamisch auf dem Spielfeld.</p>
+      </td>
+    </tr>
+  </table>
+</div>
+<a href="/game">
+  <button>Spiel Starten</button>
+</a>
 }

@@ -1,3 +1,22 @@
+p {
+    margin: 0;
+}
+body {
+    background-color: #B4D7A2;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1024px;
+    background-color: #E2EEC2;
+    padding: 16px;
+    border-radius: 8px;
+    margin: auto;
+    box-shadow: 0 0 8px #333;
+}
 .row {
     display: flex;
     flex-direction: row;
@@ -38,4 +57,22 @@
 }
 .cell.T {
     background-image: url('/assets/images/cells/tank.png'), url('/assets/images/cells/grass.png');
+}
+.statistics {
+    width: 100%;
+    padding: 16px 0;
+}
+.statistics p {
+    margin-top: 4px
+}
+.statistics .active-player {
+    background-color: #66aa66;
+    padding: 8px;
+    border-radius: 8px;
+}
+.statistics .passive-player {
+    background-color: #aaa;
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 8px;
 }

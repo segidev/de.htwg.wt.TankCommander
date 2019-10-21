@@ -2,13 +2,15 @@
 
 @main("TankCommander") {
   <h1>Game Status</h1>
-  @for(x <- controller.gameFieldToHTML) {
-    <div class="row">
+  <div class="game">
+    @for(x <- controller.gameFieldToHTML) {
+      <div class="row">
         @for(cell <- x) {
-          <span class="@cell">@cell</span>
+        <span class="cell @cell"></span>
         }
-    </div>
-  }
+      </div>
+    }
+  </div>
   <br>
   <div>
     <a href="/game/move/left"><button>Left</button></a>

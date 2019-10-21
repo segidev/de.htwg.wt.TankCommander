@@ -1,0 +1,41 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.row:last-of-type .cell {
+    border-bottom: 1px solid #333;
+}
+.cell {
+    display: flex;
+    justify-content: center;
+    background-size: contain;
+    background-image: url('/assets/images/cells/grass.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+    width: 48px;
+    height: 48px;
+}
+.cell:last-of-type {
+    border-right: 1px solid #333;
+}
+.cell.B {
+    background-image: url('/assets/images/cells/bush.png'), url('/assets/images/cells/grass.png');
+}
+.cell.F {
+    background-image: url('/assets/images/cells/tree.png'), url('/assets/images/cells/grass.png');
+}
+.cell.S {
+    background-image: url('/assets/images/cells/rock.png'), url('/assets/images/cells/grass.png');
+}
+.cell.W {
+    background-image: url('/assets/images/cells/water.png'), url('/assets/images/cells/grass.png');
+}
+.cell.T {
+    background-image: url('/assets/images/cells/tank.png'), url('/assets/images/cells/grass.png');
+}

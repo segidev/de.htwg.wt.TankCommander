@@ -1,14 +1,23 @@
-@(gameField: String)
+@(controller: de.htwg.sa.tankcommander.controller.controllerComponent.ControllerInterface)
 
 @main("TankCommander") {
   <h1>Game Status</h1>
-  <pre>@gameField</pre>
-  <a href="/game/move/left"><button>Left</button></a>
-  <a href="/game/move/right"><button>Right</button></a>
-  <a href="/game/move/up"><button>Up</button></a>
-  <a href="/game/move/down"><button>Down</button></a>
-  <a href="/game/shoot"><button>Shoot</button></a>
-  <a href="/game/turn"><button>End Turn</button></a>
-  <a href="/game/undo"><button>Undo</button></a>
-  <a href="/game/redo"><button>Redo</button></a>
+  @for(x <- controller.gameFieldToHTML) {
+    <div class="row">
+        @for(cell <- x) {
+          <span class="@cell">@cell</span>
+        }
+    </div>
+  }
+  <br>
+  <div>
+    <a href="/game/move/left"><button>Left</button></a>
+    <a href="/game/move/right"><button>Right</button></a>
+    <a href="/game/move/up"><button>Up</button></a>
+    <a href="/game/move/down"><button>Down</button></a>
+    <a href="/game/shoot"><button>Shoot</button></a>
+    <a href="/game/turn"><button>End Turn</button></a>
+    <a href="/game/undo"><button>Undo</button></a>
+    <a href="/game/redo"><button>Redo</button></a>
+  </div>
 }
